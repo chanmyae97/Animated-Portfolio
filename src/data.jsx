@@ -7,6 +7,7 @@ import {
   FaYoutube,
   FaCode,
   FaHandshake,
+  FaGithub,
 } from "react-icons/fa6";
 import { FaRegLightbulb } from "react-icons/fa";
 import { IoGitNetworkSharp } from "react-icons/io5";
@@ -224,9 +225,9 @@ export const socialHandles = [
     link: "https://www.facebook.com",
   },
   {
-    name: "Instagram",
-    icon: FaInstagram,
-    link: "https://www.instagram.com",
+    name: "Github",
+    icon: FaGithub,
+    link: "https://www.github.com",
   },
   {
     name: "LinkedIn",

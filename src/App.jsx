@@ -1,9 +1,10 @@
+import Navbar from "./segments/Navbar";
+
 function App() {
   return (
-    <h1>
-      Your are welcome - please subscribe to this channel for more professional
-      videos
-    </h1>
+    <>
+      <Navbar />
+    </>
   );
 }
 
