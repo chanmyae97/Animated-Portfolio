@@ -1,21 +1,22 @@
-.sidebar{
+.sidebar {
   width: 350px;
   height: 100px;
   min-height: 100vh;
-  position:fixed;
+  position: fixed;
   left: -400px;
   top: 0;
   z-index: 100;
   background: var(--bg-base);
   box-shadow: -4px 0 30px rgba(0, 0, 0, 0.2);
   transition: var(--transition);
+  padding: 20px;
 }
 
-.sidebar .active{
+.sidebar.active {
   left: 0;
 }
 
-.sidebar .close-btn{
+.sidebar .close-btn {
   background: var(--bg-secondary);
   display: flex;
   align-items: center;
@@ -35,10 +36,10 @@
   cursor: pointer;
 }
 
-.sidebar .route:hover{
+.sidebar .route:hover {
   color: var(--primary);
 }
 
-.sidebar .route:active{
+.sidebar .route:active {
   color: var(--primary);
 }
