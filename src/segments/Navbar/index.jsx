@@ -17,7 +17,7 @@ const Navbar = () => {
     <>
       <Sidebar open={open} onClose={() => setOpen(!open)} />
       {open && (
-        <div className="sidebar-overlay" onClick={() => setOpen(!open)}></div>
+        <div className="sidebar-overlay" onClick={() => setOpen(!open)} />
       )}
       <nav id="navbar">
         <DataWaveLogo />
