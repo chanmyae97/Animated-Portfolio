@@ -1,9 +1,11 @@
+import Hero from "./components/Hero";
 import Navbar from "./segments/Navbar";
 
 function App() {
   return (
     <>
       <Navbar />
+      <Hero />
     </>
   );
 }
