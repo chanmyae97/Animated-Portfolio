@@ -3,11 +3,13 @@ import { Link } from "react-scroll";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { FaProjectDiagram } from "react-icons/fa";
 import heroImage from "../../assets/hero.png";
+import BoxAnimation from '../../assets/BoxAnimation'
 
 import "./Hero.css";
 const Hero = () => {
   return (
     <section id="hero">
+      <BoxAnimation />
       <div className="container">
         <div>
           <h4
