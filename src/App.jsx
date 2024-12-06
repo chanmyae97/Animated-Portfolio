@@ -1,4 +1,6 @@
-import Hero from "./components/Hero";
+
+import Achievement from "./segments/Achievement";
+import Hero from "./segments/Hero";
 import Navbar from "./segments/Navbar";
 
 function App() {
@@ -6,6 +8,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <Achievement />
     </>
   );
 }

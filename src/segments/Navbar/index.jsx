@@ -5,21 +5,36 @@ import { Link } from "react-scroll";
 import Social from "../../components/Social";
 import { CgMenuRight } from "react-icons/cg";
 import Sidebar from "../../components/Sidebar";
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { convertHexToRgba } from "../../ulti";
 // social is missing 's' key
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [drop, setDrop] = useState (false);
+  const dropNavbar =() =>{
+    if(window.scrollY > 200){
+      setDrop(true)
+    }else{
+      setDrop(false)
+    }
+  }
 
   // console.log("Sidebar open state:", open);
 
+  useMemo(() =>{
+    window.addEventListener("scroll",dropNavbar);
+    return () => window.removeEventListener("scroll",dropNavbar);
+  })
+
+  // console.log("Drop", drop);
   return (
     <>
       <Sidebar open={open} onClose={() => setOpen(!open)} />
       {open && (
         <div className="sidebar-overlay" onClick={() => setOpen(!open)} />
       )}
-      <nav id="navbar">
+      <nav id="navbar" className={drop ? "blur drop": ""} style={{background:convertHexToRgba('--bg-base',0.8)}}>
         <DataWaveLogo />
         <div className="route-wrapper">
           {navRoutes.map((route, index) => (
